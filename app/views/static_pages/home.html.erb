@@ -1,14 +1,14 @@
 <div class="row" id="hero"  style="display:block;">
 	<img data-stellar-ratio="0.6" id="banner" src="/assets/weirdbanner.jpg" style="">
-	<div class="col-md-8 title" data-stellar-ratio="0.63" id="title"><h1>It Got Weird</h1></div>
+	<div class="col-md-8 col-sm-8 col-xs-8 title" data-stellar-ratio="0.63" id="title"><h1>It Got Weird</h1></div>
 </div>
 
 <div class="row" id="main" data-stellar-background-ratio="0.2">
-	<div class="col-md-6" id="trailerheader">
+	<div class="col-md-6 col-sm-6 col-xs-6" id="trailerheader">
 		<h1>The Trailer</h1>
-		<iframe id="weirdtrailer" width="80%" height="80%" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div class="col-md-5" data-stellar-ratio="0.8" id="slogan">
+	<div class="col-md-5 col-sm-5 col-xs-5" data-stellar-ratio="0.85" id="slogan">
 		<h2>A Weird Sketch Comedy Series.</h2>
 		<p id="description">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -19,32 +19,33 @@
 			nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 			sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
-	</div>
-	<div class="col-md-6 center-block">
 		<a href="/blogs"><h1>The Blog</h1></a>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-6 center-block">
+		
 	</div>
 </div>
 
 <div class="row" id="cast" data-stellar-background-ration="0.4">
 	<h1 style="text-align: center;">Cast</h1>
 	  
-	  <div class="col-md-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
 		<h2>Kevin Anderson</h2>
 		<img src="assets/anderson.jpg">
 	  </div>
 	  
 	  
-	  <div class="col-md-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
 		<h2>Alexandra Hensley</h2>
 		<img src="assets/hensley.jpg">
 	  </div>
 	  
-	  <div class="col-md-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
 		<h2>Zach Pizza</h2>
 		<img src="assets/pizza.jpg">
 	  </div>
 	  
-	  <div class="col-md-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
 		<h2>Deirdre Scott</h2>
 		<img src="assets/scott.jpg">
 	  </div>
@@ -52,12 +53,12 @@
 <div class="row" id="crew" data-stellar-background-ratio="0.4">
 	<h1 style="text-align: center;">Crew</h1>
 	  
-	  <div class="col-md-6 pic">
+	  <div class="col-md-6 col-sm-6 col-xs-6 pic">
 		<h2>Randy Overland</h2>
 		<img src="assets/ranteeth.jpg">
 	  </div>
 	  
-	  <div class="col-md-6 pic">
+	  <div class="col-md-6 col-sm-6 col-xs-6  pic">
 		<h2>Ray Wongchinda</h2>
 		<img src="assets/BADASS RAY.jpg">
 	  </div>
@@ -68,7 +69,9 @@ $(document).ready(function(){
 $("#hero").css({ "height": ($("#banner").height()) + "px"});
 $("#title").css({ "top": ($("#banner").height()/1.5) + "px"});
   $(window).stellar();
-	
+  $(window).resize(function() {
+    $(window).stellar('refresh');
+	});
 	$("h1").hide().fadeOut(1000);
 	$("h1").blur().fadeIn(1000);
 	$(".row").hide().fadeOut(400);
