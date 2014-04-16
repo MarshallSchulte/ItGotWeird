@@ -1,0 +1,8 @@
+<% provide(:title, "Edit" + @blog.title) %>
+
+<h1>Edit blog</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @blog %> |
+<%= link_to 'Back', blogs_path %>
