@@ -7,7 +7,6 @@ ItGotWeird::Application.routes.draw do
     match '/sessions/user', to: 'devise/sessions#create', via: :post
 	get '/signout', to: 'devise/sessions#destroy'
   end
-  mount Rich::Engine => '/rich', :as => 'rich'
   resources :pictures
 
   resources :blogs
