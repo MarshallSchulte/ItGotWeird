@@ -1,29 +1,27 @@
 <div class="row" id="hero"  style="display:block;">
 	<img data-stellar-ratio="0.6" id="banner" src="/assets/weirdbanner.jpg" style="">
-	<div class="col-md-8 col-sm-8 col-xs-8 title" data-stellar-ratio="0.63" id="title"><h1>It Got Weird</h1></div>
 </div>
 
-<div class="row" id="main" data-stellar-background-ratio="0.2">
-	<div class="col-md-6 col-sm-6 col-xs-6" id="trailerheader">
-		<h1>The Trailer</h1>
+<div class="row" id="main" data-stellar-background-ratio="0.1">
+	<div class="col-md-5 col-sm-5 col-xs-5" id="trailerheader">
+		<h2>The Trailer</h1>
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div class="col-md-5 col-sm-5 col-xs-5" data-stellar-ratio="0.85" id="slogan">
-		<h2>A Weird Sketch Comedy Series.</h2>
-		<p id="description">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-			nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-			in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-			nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-			sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-		<a href="/blogs"><h1>The Blog</h1></a>
-	</div>
-	<div class="col-md-6 col-sm-6 col-xs-6 center-block">
+		<div class="col-md-6 col-sm-6 col-xs-6" data-stellar-ratio="0.9" data-stellar-vertical-offset="-100" id="slogan">
+		  <div data-stellar-ratio="0.8" data-stellar-vertical-offset="-100" class="title" id="title"><h1>It Got Weird</h1></div>
+			 <h2 id="deschead">A Weird Sketch Comedy Series.</h2>
+			  <p id="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+					in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+					nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+					sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  </p>
+			  <a id="bloglink" href="/blogs"><h1>The Blog</h1></a>
+		</div>
 		
-	</div>
 </div>
 
 <div class="row" id="cast" data-stellar-background-ration="0.4">
@@ -67,10 +65,10 @@
 <script>
 $(document).ready(function(){
 $("#hero").css({ "height": ($("#banner").height()) + "px"});
-$("#title").css({ "top": ($("#banner").height()/1.5) + "px"});
-  $(window).stellar();
+  $.stellar( {hideDistantElements: false} )
   $(window).resize(function() {
-    $(window).stellar('refresh');
+	$.stellar('refresh');
+	$("#hero").css({ "height": ($("#banner").height()) + "px"});
 	});
 	$("h1").hide().fadeOut(1000);
 	$("h1").blur().fadeIn(1000);

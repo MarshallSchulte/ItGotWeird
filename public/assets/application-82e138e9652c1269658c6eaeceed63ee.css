@@ -8317,9 +8317,10 @@ ul {
   /* line 348, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   body {
     font-size: 3px;
+    margin-left: 1em;
   }
 
-  /* line 351, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 352, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   #weirdtrailer {
     width: 300px;
     height: 182px;
