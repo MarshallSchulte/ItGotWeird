@@ -8,7 +8,7 @@
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 		<div class="col-md-6 col-sm-6 col-xs-6" data-stellar-ratio="0.9" data-stellar-vertical-offset="-100" id="slogan">
-		  <div data-stellar-ratio="0.8" data-stellar-vertical-offset="-100" class="title" id="title"><h1>It Got Weird</h1></div>
+		  <div data-stellar-ratio="0.7" data-stellar-vertical-offset="-100" class="title" id="title"><h1>It Got Weird</h1></div>
 			 <h2 id="deschead">A Weird Sketch Comedy Series.</h2>
 			  <p id="description">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -67,13 +67,17 @@ $(document).ready(function(){
 $("#hero").css({ "height": ($("#banner").height()) + "px"});
   $.stellar( {hideDistantElements: false} )
   $(window).resize(function() {
-	$.stellar('refresh');
 	$("#hero").css({ "height": ($("#banner").height()) + "px"});
-	});
+	$.stellar('refresh');
 	$("h1").hide().fadeOut(1000);
 	$("h1").blur().fadeIn(1000);
 	$(".row").hide().fadeOut(400);
 	$(".row").blur().fadeIn(400);
 	});
+	$("h1").hide().fadeOut(1000);
+	$("h1").blur().fadeIn(1000);
+	$(".row").hide().fadeOut(400);
+	$(".row").blur().fadeIn(400);
+});
 
 </script>
