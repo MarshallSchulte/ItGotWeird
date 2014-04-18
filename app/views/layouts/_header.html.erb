@@ -1,20 +1,14 @@
 <div class="row headerhome center-block">
-	<%= link_to "<h1>It Got Weird</h1>".html_safe, root_path %>
+	<%= link_to (sanitize "<h1>It Got Weird</h1>"), blogs_path %>
 </div>
 <div class="row nav center-block">
-	<a href="/about"><div class="col-md-3 navbutton">
-		<h1>What is this?</h1>
-	</div></a>
-	<a href="/videos"><div class="col-md-2 navbutton">
+	<%= link_to (sanitize '<div class="col-md-4 navbutton">
+		<h1>Home</h1>
+	</div>'), root_path %>
+	<a href="/videos"><div class="col-md-4 navbutton">
 		<h1>Videos</h1>
 	</div></a>
-	<a href="/blog"><div class="col-md-2 navbutton">
-		<h1>Blog</h1>
-	</div></a>
-	<a href="/crew"><div class="col-md-2 navbutton">
-		<h1>Crew</h1>
-	</div></a>
-	<a href="/contact"><div class="col-md-2 navbutton">
+	<a href="/contact"><div class="col-md-4 navbutton">
 		<h1>Contact</h1>
 	</div></a>
 </div>

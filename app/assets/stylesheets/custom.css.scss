@@ -53,6 +53,12 @@ a:hover{
 	text-align: center;
 	font-family: SketchRockwellBold;
 	color:white;
+	border:1px solid transparent;
+	border-image: url('chalk.png');
+	border-image-slice:25;
+	border-image-width: 20 20 0 20;
+	border-image-outset: 0;
+	border-image-repeat: round;
 	h1{
 		font-size: 10em;
 		text-shadow: 4px 4px #6B6B6B;
@@ -69,14 +75,22 @@ a:hover{
 .nav{
 	text-align: center;
 	font-family: SketchRockwellBold;
-	border-style: solid;
-	border-width: 0px 0px 2px 0px;
-	border-color: #FFFFFF;
-	padding-left:7%;
+	border:1px solid transparent;
+	border-image: url('chalk.png');
+	border-image-slice:25;
+	border-image-width: 20 20 20 20;
+	border-image-outset: 0;
+	border-image-repeat: round;
+	padding-left:5%;
+	padding-right: 5%;
+	padding-top:20px;
+	padding-bottom:20px;
 	background-color: #333333;
+	z-index:3;
 	h1{
 		font-size: 3em;
 		text-shadow: 2px 2px #686868;
+		z-index:2;
 	}
 	a{
 		color: #FFFFFF;
@@ -93,11 +107,13 @@ a:hover{
 }
 .navbutton{
 	background-color: #333333;
+	border-radius: 30px;
 	-webkit-transition: background-color 100ms ease-in;
     -moz-transition: background-color 100ms ease-in;
     -o-transition: background-color 100ms ease-in;
     -ms-transition: background-color 100ms ease-in;
 	transition: background-color 100ms ease-in;
+	z-index:2;
 }
 .navbutton:hover{
 	background-color: #FFFFFF;
@@ -325,6 +341,7 @@ ul{
 	border-image-repeat: round;
 	padding: 0 10% 10% 10%;
 	height: 100%;
+	background-color: #333333;
 }
 
 #BlogHeader{
@@ -343,22 +360,36 @@ ul{
 	
 }
 
-#BlogTitle{
+.BlogTitle{
 	font-family: SketchRockwellBold;
 	font-size: 5em;
 	padding-bottom: 30px;
 }
 
-#BlogContent{
+.BlogContent{
 	font-size: 1.5em;
 }
 
-#Blog{
+.Blog{
 	margin-bottom: 40px;
 	background-color: #555555;
 	box-shadow: 5px 5px 0 #888888;
 	border-radius: 15px;
 	padding: 0 20px 10px 20px;
+}
+.ImageRow{
+	text-align:center;
+}
+.BlogImage{
+		width:100%;
+		max-width: 600px;
+		border:1px solid transparent;
+		border-image: url('chalk.png');
+		border-image-slice:25;
+		border-image-width: 20 20 20 20;
+		border-image-outset: 0;
+		border-image-repeat: round;
+		padding:20px;
 }
 
 #NewBlog{
@@ -377,6 +408,11 @@ ul{
 		border-image-repeat: round;
 		padding:20px;
 		}
+}
+
+#BlogForm{
+	padding-left:10%;
+	padding-right:10%;
 }
 
 @media screen and (max-width: 1750px){

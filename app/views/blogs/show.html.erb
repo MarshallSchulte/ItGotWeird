@@ -1,5 +1,5 @@
 <% provide(:title, @blog.title) %>
-
+<%= render 'layouts/header' %>
 <div id="BlogContainer" class="container">
 <p id="notice"><%= notice %></p>
 <div class="row blogtitle">
@@ -11,7 +11,7 @@
 </div>
 
 <div class="row">
-	<div class="col-md-9 blogcontent">
+	<div class="col-md-12 blogcontent">
 	    <%= sanitize @blog.content %>
 	</div></br>
 </div>

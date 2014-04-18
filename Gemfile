@@ -26,6 +26,7 @@ gem 'formtastic-bootstrap'
 gem 'ckeditor'
 gem 'mini_magick'
 gem 'non-stupid-digest-assets'
+gem 'jquery-turbolinks'
 
 
 group :development, :test do
