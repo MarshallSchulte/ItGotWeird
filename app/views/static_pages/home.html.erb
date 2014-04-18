@@ -64,15 +64,11 @@
 
 <script>
 $(document).ready(function(){
-$("#hero").css({ "height": ($("#banner").height()) + "px"});
+$("#hero").height($("#banner").height());
   $.stellar( {hideDistantElements: false} )
   $(window).resize(function() {
-	$("#hero").css({ "height": ($("#banner").height()) + "px"});
+    $("#hero").height($("#banner").height())
 	$.stellar('refresh');
-	$("h1").hide().fadeOut(1000);
-	$("h1").blur().fadeIn(1000);
-	$(".row").hide().fadeOut(400);
-	$(".row").blur().fadeIn(400);
 	});
 	$("h1").hide().fadeOut(1000);
 	$("h1").blur().fadeIn(1000);

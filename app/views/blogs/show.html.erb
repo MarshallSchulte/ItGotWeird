@@ -1,16 +1,22 @@
 <% provide(:title, @blog.title) %>
-<p id="notice"><%= notice %></p>
 
+<div id="BlogContainer" class="container">
+<p id="notice"><%= notice %></p>
 <div class="row blogtitle">
   <h1><%= @blog.title %></h1>
 </div>
 
+<div class="row blogfeatured center-block">
+	<img src="<%= @blog.image %>">
+</div>
+
 <div class="row">
-	<div class="col-md-6 blogcontent">
-	    <%= @blog.content.html_safe %>
+	<div class="col-md-9 blogcontent">
+	    <%= sanitize @blog.content %>
 	</div></br>
 </div>
 <div class="row actions">
 	<%= link_to 'Edit', edit_blog_path(@blog) %> |
 	<%= link_to 'Back', blogs_path %>
+</div>
 </div>
