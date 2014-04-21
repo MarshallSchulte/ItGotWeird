@@ -7923,9 +7923,10 @@ html {
   margin-left: 0;
   margin-right: 0;
   color: #FFFFFF;
+  background-size: cover;
 }
 
-/* line 18, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 19, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 body {
   background-color: #222222;
   -webkit-animation-duration: 0.0001s;
@@ -7937,39 +7938,39 @@ body {
   height: 100%;
 }
 
-/* line 29, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 30, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 a {
   color: white;
   text-decoration: none;
   transition: color ease-in 0.1s;
 }
 
-/* line 35, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 36, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 a:hover {
   color: #AAAAAA;
   text-decoration: none;
 }
 
 @-webkit-keyframes fontfix {
-  /* line 41, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 42, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   from {
     opacity: 1;
   }
 
-  /* line 42, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 43, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   to {
     opacity: 1;
   }
 }
 
-/* line 45, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 46, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
   z-index: -1;
 }
 
-/* line 51, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 52, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .headerhome {
   text-align: center;
   font-family: SketchRockwellBold;
@@ -7981,22 +7982,22 @@ a:hover {
   border-image-outset: 0;
   border-image-repeat: round;
 }
-/* line 61, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 62, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .headerhome h1 {
   font-size: 10em;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 65, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 66, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .headerhome a {
   color: white;
 }
-/* line 68, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 69, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .headerhome a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 74, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 75, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .nav {
   text-align: center;
   font-family: SketchRockwellBold;
@@ -8013,13 +8014,13 @@ a:hover {
   background-color: #333333;
   z-index: 3;
 }
-/* line 89, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 90, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .nav h1 {
   font-size: 3em;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
-/* line 94, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 95, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .nav a {
   color: #FFFFFF;
   -webkit-transition: color 100ms ease-in;
@@ -8028,13 +8029,13 @@ a:hover {
   -ms-transition: color 100ms ease-in;
   transition: color 100ms ease-in;
 }
-/* line 102, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 103, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .nav a:hover {
   color: #222222;
   text-decoration: none;
 }
 
-/* line 107, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 108, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .navbutton {
   background-color: #333333;
   border-radius: 30px;
@@ -8046,18 +8047,18 @@ a:hover {
   z-index: 2;
 }
 
-/* line 117, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 118, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .navbutton:hover {
   background-color: #FFFFFF;
 }
 
-/* line 121, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 122, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #hero {
   position: relative;
   display: block;
 }
 
-/* line 126, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 127, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #banner {
   position: fixed;
   display: block;
@@ -8068,7 +8069,7 @@ a:hover {
   bottom: 0;
 }
 
-/* line 136, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 137, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #main {
   position: relative;
   text-align: center;
@@ -8080,31 +8081,31 @@ a:hover {
   border-image-width: 20 0 0 0;
   border-image-outset: 0;
   border-image-repeat: round;
-  background-image: url(weirddinner.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 800px;
 }
-/* line 151, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 152, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #main h2 {
   font-size: 4em;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* line 157, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 158, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .title {
   position: relative;
   display: block;
   font-family: SketchRockwellBold;
   z-index: 2;
 }
-/* line 162, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 163, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .title h1 {
   font-size: 10em;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* line 168, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 169, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #weirdtrailer {
   padding: 20px;
   border: 1px solid transparent;
@@ -8117,7 +8118,7 @@ a:hover {
   height: 425px;
 }
 
-/* line 180, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 181, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #trailerheader {
   float: right;
   margin-top: 60px;
@@ -8125,35 +8126,33 @@ a:hover {
   height: 500px;
 }
 
-/* line 187, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 188, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #slogan {
   position: relative;
   margin-left: 5em;
   z-index: 3;
 }
-/* line 191, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 192, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #slogan h2 {
   position: relative;
   font-size: 3.0em;
   z-index: 3;
 }
 
-/* line 198, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 199, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #deschead {
   position: relative;
   padding-top: 2em;
-  font-family: Helvetica;
   border: 1px solid transparent;
   border-image: url("chalk.png");
   border-image-slice: 25;
   border-image-width: 20 0 0 0;
   border-image-outset: 0;
   border-image-repeat: round;
-  letter-spacing: 5px;
   z-index: 3;
 }
 
-/* line 212, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 211, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #description {
   position: relative;
   margin-top: 2em;
@@ -8163,12 +8162,12 @@ a:hover {
   z-index: 3;
 }
 
-/* line 221, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 220, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #bloglink {
   position: relative;
 }
 
-/* line 225, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 224, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #cast {
   position: relative;
   font-family: SketchRockwellBold;
@@ -8178,27 +8177,22 @@ a:hover {
   border-image-width: 20 0 0 0;
   border-image-outset: 0;
   border-image-repeat: round;
-  background-image: url("cast.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   z-index: 4;
   background-color: #222222;
-  padding-bottom: 2em;
 }
-/* line 241, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 235, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #cast h1 {
   font-size: 5em;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
-/* line 245, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 238, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #cast h2 {
   font-size: 3em;
 }
 
-/* line 250, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 243, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #crew {
   position: relative;
+  margin-top: 2em;
   font-family: SketchRockwellBold;
   border: 1px solid transparent;
   border-image: url("chalk.png");
@@ -8208,38 +8202,30 @@ a:hover {
   border-image-repeat: round;
   z-index: 4;
   background-color: #222222;
-  background-image: url("crew.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
-/* line 265, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 255, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #crew h1 {
   font-size: 5em;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
-/* line 269, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 258, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #crew h2 {
   font-size: 3em;
 }
 
-/* line 273, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 262, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .pic {
   font-family: SketchRockwellBold;
   text-align: center;
-  margin-bottom: 5em;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
-/* line 278, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 265, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .pic img {
   width: 100%;
   height: auto;
   border-radius: 1000px;
   max-width: 300px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* line 287, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 273, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 textarea {
   width: 100%;
   height: 300px;
@@ -8247,17 +8233,17 @@ textarea {
   background-color: #555555;
 }
 
-/* line 294, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 280, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #blog_title {
   width: 100%;
 }
 
-/* line 298, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 284, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 ul .wysihtml5-toolbar {
   margin-left: 24%;
 }
 
-/* line 303, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 289, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .blogtitle {
   text-align: center;
   border: 1px solid transparent;
@@ -8270,19 +8256,19 @@ ul .wysihtml5-toolbar {
   margin-right: 10%;
   margin-bottom: 30px;
 }
-/* line 314, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 300, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .blogtitle h1 {
   font-family: SketchRockwellBold;
   font-size: 6em;
 }
 
-/* line 320, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 306, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .blogcontent {
   margin-top: 30px;
   font-size: 1.5em;
 }
 
-/* line 325, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 311, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 input {
   border-style: solid;
   border-color: white;
@@ -8291,13 +8277,13 @@ input {
   background-color: #555555;
 }
 
-/* line 333, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 319, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .actions {
   margin-top: 30px;
   margin-left: 33%;
 }
 
-/* line 338, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 324, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .formtastic .input .label {
   text-align: left;
   list-style-type: none;
@@ -8305,12 +8291,12 @@ input {
   float: none;
 }
 
-/* line 345, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 331, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 ul {
   list-style: none;
 }
 
-/* line 349, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 335, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #BlogContainer {
   border: 1px solid transparent;
   border-image: url("chalk.png");
@@ -8323,7 +8309,7 @@ ul {
   background-color: #333333;
 }
 
-/* line 361, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 347, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #BlogHeader {
   font-family: SketchRockwellBold;
   font-size: 8em;
@@ -8339,19 +8325,19 @@ ul {
   margin-right: 30%;
 }
 
-/* line 377, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 363, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .BlogTitle {
   font-family: SketchRockwellBold;
   font-size: 5em;
   padding-bottom: 30px;
 }
 
-/* line 383, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 369, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .BlogContent {
   font-size: 1.5em;
 }
 
-/* line 387, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 373, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .Blog {
   margin-bottom: 40px;
   background-color: #555555;
@@ -8366,12 +8352,12 @@ ul {
   border-image-repeat: round;
 }
 
-/* line 400, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 386, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .ImageRow {
   text-align: center;
 }
 
-/* line 403, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 389, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .BlogImage {
   width: 100%;
   max-width: 600px;
@@ -8384,16 +8370,16 @@ ul {
   padding: 20px;
 }
 
-/* line 415, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 401, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #NewBlog {
   margin: 10px;
 }
 
-/* line 419, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 405, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .blogfeatured {
   text-align: center;
 }
-/* line 421, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 407, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 .blogfeatured img {
   max-width: 600px;
   border: 1px solid transparent;
@@ -8405,72 +8391,66 @@ ul {
   padding: 20px;
 }
 
-/* line 433, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+/* line 419, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
 #BlogForm {
   padding-left: 10%;
   padding-right: 10%;
 }
 
-/* line 438, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
-#footer {
-  margin-bottom: 3em;
-  font-family: Helvetica;
-}
-
 @media screen and (max-width: 1750px) {
-  /* line 444, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 425, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   body {
     font-size: 10px;
   }
 
-  /* line 447, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 428, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   #weirdtrailer {
     width: 600px;
     height: 364px;
   }
 
-  /* line 451, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 432, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   .title {
     margin-left: 5em;
   }
 }
 @media screen and (max-width: 1202px) {
-  /* line 460, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 441, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   body {
     font-size: 7px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1519px) {
-  /* line 465, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 446, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   body {
     font-size: 6px;
   }
 
-  /* line 468, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 449, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   #weirdtrailer {
     width: 500px;
     height: 304px;
   }
 }
 @media screen and (max-width: 991px) {
-  /* line 475, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 456, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   body {
     font-size: 5px;
   }
 
-  /* line 478, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 459, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   #weirdtrailer {
     width: 400px;
     height: 243px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 485, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 466, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   body {
     font-size: 3px;
   }
 
-  /* line 488, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
+  /* line 469, C:/ItGotWeird/app/assets/stylesheets/custom.css.scss */
   #weirdtrailer {
     width: 300px;
     height: 182px;

@@ -7,8 +7,8 @@
 		<h2>The Trailer</h1>
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
-		<div class="col-md-6 col-sm-6 col-xs-6" data-stellar-ratio="0.9" data-stellar-vertical-offset="-100" id="slogan">
-		  <div data-stellar-ratio="0.7" data-stellar-vertical-offset="-100" class="title" id="title"><h1>It Got Weird</h1></div>
+		<div class="col-md-6 col-sm-6 col-xs-6" id="slogan" data-stellar-ratio="0.9" data-stellar-vertical-offset="-100" >
+		  <div class="title" id="title" data-stellar-ratio="0.7" data-stellar-vertical-offset="-50"><img src="/assets/Title.png"></div>
 			 <h2 id="deschead">A Weird Sketch Comedy Series.</h2>
 			  <p id="description">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -24,7 +24,7 @@
 		
 </div>
 
-<div class="row" id="cast" data-stellar-background-ration="0.4">
+<div class="row" id="cast" data-stellar-background-ratio="0.4">
 	<h1 style="text-align: center;">Cast</h1>
 	  
 	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
@@ -48,7 +48,7 @@
 		<img src="assets/scott.jpg">
 	  </div>
 </div>
-<div class="row" id="crew" data-stellar-background-ratio="0.4">
+<div class="row" id="crew">
 	<h1 style="text-align: center;">Crew</h1>
 	  
 	  <div class="col-md-6 col-sm-6 col-xs-6 pic">
@@ -60,13 +60,15 @@
 		<h2>Ray Wongchinda</h2>
 		<img src="assets/BADASS RAY.jpg">
 	  </div>
+	  
+	  <%= render 'layouts/footer' %>
 </div>
 
 <script>
 $(document).ready(function(){
 $("#hero").height($("#banner").height());
 $("#main").height($("#banner").height());
-  $.stellar( {hideDistantElements: false} )
+  $.stellar( {hideDistantElements: false} );
   $(window).resize(function() {
     $("#hero").height($("#banner").height());
 	$("#main").height($("#banner").height());
