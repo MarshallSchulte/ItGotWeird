@@ -19,7 +19,7 @@
 					nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 					sunt in culpa qui officia deserunt mollit anim id est laborum.
 			  </p>
-			  <a id="bloglink" href="/blogs"><h1>The Blog</h1></a>
+			  <a id="bloglink" href="/blogs"><h1 id="TheBlog">The Blog</h1></a>
 		</div>
 		
 </div>
@@ -48,7 +48,7 @@
 		<img src="assets/scott.jpg">
 	  </div>
 </div>
-<div class="row" id="crew">
+<div class="row parallax" id="crew">
 	<h1 style="text-align: center;">Crew</h1>
 	  
 	  <div class="col-md-6 col-sm-6 col-xs-6 pic">
@@ -68,6 +68,7 @@
 $(document).ready(function(){
 if(/*@cc_on!@*/false)
 {
+console.log("IE")
 $("#hero").height($("#banner").height());
 $("#main").height($("#banner").height());
 $(window).resize(function() {
@@ -85,11 +86,11 @@ $("#hero").height($("#banner").height());
 $("#main").height($("#banner").height());
 var parallaxImages = [];
 $('.parallax').each(function(index) {
-	$.stellar( {hideDistantElements: false} );
 	var parallaxImage = {};
 	parallaxImage.element = $(this);
 	parallaxImage.height = parallaxImage.element.height();
 	parallaxImages.push(parallaxImage);
+	$.stellar( {hideDistantElements: false} );
 });
 $(window).resize(function() {
     $("#hero").height($("#banner").height());
