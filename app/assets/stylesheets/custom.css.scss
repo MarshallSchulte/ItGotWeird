@@ -1,10 +1,11 @@
 @import "bootstrap";
 @font-face{
 	font-family: SketchRockwellBold;
-	src: url(SketchRockwell.eot);
-	src: local('☺'),
-		url('SketchRockwell-Bold.ttf') format('truetype'),
-		url('SketchRockwell-Bold.otf') format('opentype');
+	src: url(SketchRockwell-Bold.eot);
+	src: url('SketchRockwell-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('SketchRockwell-Bold.ttf') format('truetype'),
+		 url('sketchRockwell-bold-webfont.woff') format('woff'),
+		 url('sketchRockwell-bold-webfont.svg#SketchRockwellBold') format('svg');
 }
 
 html{
