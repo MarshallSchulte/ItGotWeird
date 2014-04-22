@@ -66,6 +66,21 @@
 
 <script>
 $(document).ready(function(){
+if(/*@cc_on!@*/false)
+{
+$("#hero").height($("#banner").height());
+$("#main").height($("#banner").height());
+$(window).resize(function() {
+    $("#hero").height($("#banner").height());
+	$("#main").height($("#banner").height());
+});
+    $("h1").hide().fadeOut(1000);
+	$("h1").blur().fadeIn(1000);
+	$(".row").hide().fadeOut(400);
+	$(".row").blur().fadeIn(400);
+}
+else
+{
 $("#hero").height($("#banner").height());
 $("#main").height($("#banner").height());
 var parallaxImages = [];
@@ -86,6 +101,7 @@ $(window).resize(function() {
 	$("h1").blur().fadeIn(1000);
 	$(".row").hide().fadeOut(400);
 	$(".row").blur().fadeIn(400);
+}
 });
 
 </script>
