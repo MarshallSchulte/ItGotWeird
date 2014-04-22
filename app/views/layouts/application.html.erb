@@ -8,6 +8,51 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script>
+$(document).ready(function(){
+	
+	if (!!navigator.userAgent.match(/Trident\/7\./))
+	{
+
+	console.log("IE");
+	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
+	$("#hero").height($("#banner").height());
+	$("#main").height($("#banner").height());
+	$(window).resize(function() {
+		$("#hero").height($("#banner").height());
+		$("#main").height($("#banner").height());
+	});
+		$("h1").hide().fadeOut(1000);
+		$("h1").blur().fadeIn(1000);
+		$(".row").hide().fadeOut(400);
+		$(".row").blur().fadeIn(400);
+	}
+	else
+	{
+	$("#hero").height($("#banner").height());
+	$("#main").height($("#banner").height());
+	var parallaxImages = [];
+	$('.parallax').each(function(index) {
+		var parallaxImage = {};
+		parallaxImage.element = $(this);
+		parallaxImage.height = parallaxImage.element.height();
+		parallaxImages.push(parallaxImage);
+		$.stellar( {hideDistantElements: false} );
+	});
+	$(window).resize(function() {
+		$("#hero").height($("#banner").height());
+		$("#main").height($("#banner").height());
+		$.stellar('refresh');
+	});
+	  
+		$("h1").hide().fadeOut(1000);
+		$("h1").blur().fadeIn(1000);
+		$(".row").hide().fadeOut(400);
+		$(".row").blur().fadeIn(400);
+
+	}
+});
+</script>
 </head>
 <body>
 	<div class="container-fluid">
