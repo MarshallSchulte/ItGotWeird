@@ -1,7 +1,8 @@
 @import "bootstrap";
 @font-face{
 	font-family: SketchRockwellBold;
-	src: url("SketchRockwell-Bold.ttf");
+	src: url("SketchRockwell-Bold.eoc");
+	src: local("SketchRockwellBold"), url("SketchRockwell-Bold.otf") format('opentype');
 }
 
 html{

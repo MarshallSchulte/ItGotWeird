@@ -2,7 +2,7 @@
 	<img data-stellar-ratio="0.6" id="banner" src="/assets/weirdbanner.jpg" style="">
 </div>
 
-<div class="row" id="main" data-stellar-background-ratio="0.7">
+<div class="row parallax" id="main" data-stellar-background-ratio="0.7">
 	<div class="col-md-5 col-sm-5 col-xs-5" id="trailerheader">
 		<h2>The Trailer</h1>
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -24,7 +24,7 @@
 		
 </div>
 
-<div class="row" id="cast" data-stellar-background-ratio="0.4">
+<div class="row parallax" id="cast" data-stellar-background-ratio="0.4">
 	<h1 style="text-align: center;">Cast</h1>
 	  
 	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
@@ -68,12 +68,20 @@
 $(document).ready(function(){
 $("#hero").height($("#banner").height());
 $("#main").height($("#banner").height());
-  $.stellar( {hideDistantElements: false} );
-  $(window).resize(function() {
+var parallaxImages = [];
+$('.parallax').each(function(index) {
+	$.stellar( {hideDistantElements: false} );
+	var parallaxImage = {};
+	parallaxImage.element = $(this);
+	parallaxImage.height = parallaxImage.element.height();
+	parallaxImages.push(parallaxImage);
+});
+$(window).resize(function() {
     $("#hero").height($("#banner").height());
 	$("#main").height($("#banner").height());
 	$.stellar('refresh');
-	});
+});
+  
 	$("h1").hide().fadeOut(1000);
 	$("h1").blur().fadeIn(1000);
 	$(".row").hide().fadeOut(400);
