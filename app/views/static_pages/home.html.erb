@@ -2,7 +2,7 @@
 	<img data-stellar-ratio="0.6" id="banner" src="/assets/weirdbanner.jpg" style="">
 </div>
 
-<div class="row parallax" id="main" data-stellar-background-ratio="0.7">
+<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="main" data-stellar-background-ratio="0.7">
 	<div class="col-md-5 col-sm-5 col-xs-5" id="trailerheader">
 		<h2>The Trailer</h1>
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -24,43 +24,57 @@
 		
 </div>
 
-<div class="row parallax" id="cast" data-stellar-background-ratio="0.4">
-	<h1 style="text-align: center;">Cast</h1>
+<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="cast" data-stellar-background-ratio="0.4">
+	<h1>Cast</h1>
 	  
-	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-6 pic">
 		<h2>Kevin Anderson</h2>
-		<img src="assets/anderson.jpg">
+		<img src="assets/anderson.png">
 	  </div>
 	  
 	  
-	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-6 pic">
 		<h2>Alexandra Hensley</h2>
-		<img src="assets/hensley.jpg">
+		<img src="assets/hensley.png">
 	  </div>
 	  
-	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-6 pic">
 		<h2>Zach Pizza</h2>
-		<img src="assets/pizza.jpg">
+		<img src="assets/pizza.png">
 	  </div>
 	  
-	  <div class="col-md-3 col-sm-3 col-xs-3 pic">
+	  <div class="col-md-3 col-sm-3 col-xs-6 pic">
 		<h2>Deirdre Scott</h2>
-		<img src="assets/scott.jpg">
+		<img src="assets/scott.png">
 	  </div>
 </div>
-<div class="row parallax" id="crew">
+<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="crew">
 	<h1 style="text-align: center;">Crew</h1>
 	  
 	  <div class="col-md-6 col-sm-6 col-xs-6 pic">
 		<h2>Randy Overland</h2>
-		<img src="assets/ranteeth.jpg">
+		<img src="assets/randy.png">
 	  </div>
 	  
 	  <div class="col-md-6 col-sm-6 col-xs-6  pic">
 		<h2>Ray Wongchinda</h2>
-		<img src="assets/BADASS RAY.jpg">
+		<img src="assets/BADASS-RAY.png">
 	  </div>
 	  
 	  <%= render 'layouts/footer' %>
 </div>
-
+<script src="iscroll.js"></script>
+<script>
+(function(){
+  var ua = navigator.userAgent,
+  isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+  var iScrollInstance;
+  if (isMobileWebkit) {
+  iScrollInstance = new iScroll('scroller');
+  $('.parallax').stellar({
+  scrollProperty: 'transform',
+  positionProperty: 'transform'
+});
+}
+})();
+</script>

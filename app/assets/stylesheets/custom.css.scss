@@ -166,9 +166,9 @@ a:hover{
 	h1{
 	font-size:10em;
 	text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+	}
 	img{
 		width:100%;
-	}
 	}
 }
 
@@ -250,6 +250,7 @@ a:hover{
 	background-color: #222222;
 	padding-bottom: 2em;
 	h1{
+		text-align:center;
 		font-size:5em;
 		text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 	}
@@ -274,6 +275,7 @@ a:hover{
 	background-attachment:fixed;
 	background-repeat: no-repeat;
 	h1{
+		text-align:center;
 		font-size:5em;
 		text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 	}
@@ -284,13 +286,15 @@ a:hover{
 .pic{
 	font-family: SketchRockwellBold;
 	text-align:center;
-	margin-bottom:5em;
+	margin-bottom:0em;
 	text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	h1{
+	
+	}
 	img{
 		width:100%;
 		height:auto;
 		max-width:300px;
-		box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 	}
 }
 
@@ -496,7 +500,24 @@ ul{
 		font-size:3px;
 	}
 	#weirdtrailer{
-		width: 300px;
+		width: 200px;
 		height: 182px;
+	}
+	
+	#trailerheader{
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width:480px){
+	body{
+		font-size:3px;
+	}
+	#weirdtrailer{
+		width: 150px;
+		height: 121px;
+	}
+	#trailerheader{
+		margin-right: 0px;
 	}
 }
