@@ -10,8 +10,9 @@
   <%= csrf_meta_tags %>
   <script>
 $(document).ready(function(){
-	
-	if (!!navigator.userAgent.match(/Trident\/7\./))
+	var ua = navigator.userAgent,
+	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+	if (!!navigator.userAgent.match(/Trident\/7\./) || (isMobileWebkit))
 	{
 
 	console.log("IE");
