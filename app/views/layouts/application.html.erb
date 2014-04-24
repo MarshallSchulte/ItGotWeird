@@ -18,7 +18,6 @@ $(document).ready(function(){
 	console.log("IE");
 	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
 	$("#hero").height($("#banner").height());
-	$("#main").height($("#banner").height());
 	$(window).resize(function() {
 		$("#hero").height($("#banner").height());
 		$("#main").height($("#banner").height());
@@ -39,7 +38,9 @@ $(document).ready(function(){
 	$("#deschead").css({ "border-image-width": "0 0 0 0", "padding-top": "10px" });
 	$(window).resize(function() {
 		$("#hero").height($("#banner").height());
-		$("#main").height($("#banner").height());
+		if($("#main").height() < 320){
+		$("#main").height(320);
+	}
 	});
 		$("h1").hide().fadeOut(1000);
 		$("h1").blur().fadeIn(1000);
@@ -48,8 +49,8 @@ $(document).ready(function(){
 	}
 	else
 	{
+	console.log("desktop");
 	$("#hero").height($("#banner").height());
-	$("#main").height($("#banner").height());
 	var parallaxImages = [];
 	$('.parallax').each(function(index) {
 		var parallaxImage = {};

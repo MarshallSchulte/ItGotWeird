@@ -152,6 +152,7 @@ a:hover{
 	background-size:cover;
 	background-attachment:fixed;
 	background-repeat: no-repeat;
+	height:auto;
 	h2{
 		font-size: 4em;
 		text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
@@ -515,6 +516,9 @@ ul{
 	body{
 		font-size:5px;
 	}
+	#main{
+		height:auto;
+	}
 	#weirdtrailer{
 		width: 300px;
 		height: 182px;
@@ -545,6 +549,9 @@ ul{
 @media screen and (max-width:480px){
 	body{
 		font-size:6px;
+	}
+	#main{
+		height:auto;
 	}
 	#weirdtrailer{
 		width: 300px;
