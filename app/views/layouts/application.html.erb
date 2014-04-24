@@ -12,11 +12,27 @@
 $(document).ready(function(){
 	var ua = navigator.userAgent,
 	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
-	if (!!navigator.userAgent.match(/Trident\/7\./) || (isMobileWebkit))
+	if (!!navigator.userAgent.match(/Trident\/7\./))
 	{
 
 	console.log("IE");
 	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
+	$("#hero").height($("#banner").height());
+	$("#main").height($("#banner").height());
+	$(window).resize(function() {
+		$("#hero").height($("#banner").height());
+		$("#main").height($("#banner").height());
+	});
+		$("h1").hide().fadeOut(1000);
+		$("h1").blur().fadeIn(1000);
+		$(".row").hide().fadeOut(400);
+		$(".row").blur().fadeIn(400);
+	}
+	else if(isMobileWebkit)
+	{
+	console.log("Mobile");
+	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
+	$("#banner").attr({style: "position:relative;"});
 	$("#hero").height($("#banner").height());
 	$("#main").height($("#banner").height());
 	$(window).resize(function() {
