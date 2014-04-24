@@ -31,9 +31,12 @@ $(document).ready(function(){
 	else if(isMobileWebkit)
 	{
 	console.log("Mobile");
-	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
+	$("#banner").attr({src: "/assets/weirdbannermobile.jpg"});
 	$("#banner").attr({style: "position:relative;"});
 	$("#hero").height($("#banner").height());
+	$("#trailerheader").insertAfter( $("#slogan") );
+	$(".title").remove();
+	$("#deschead").css({ "border-image-width": "0 0 0 0", "padding-top": "10px" });
 	$(window).resize(function() {
 		$("#hero").height($("#banner").height());
 		$("#main").height($("#banner").height());
