@@ -482,6 +482,7 @@ ul{
 	#weirdtrailer{
 		width: 500px;
 		height: 304px;
+		margin-top:40px;
 	}
 }
 
@@ -492,16 +493,18 @@ ul{
 	#weirdtrailer{
 		width: 400px;
 		height: 243px;
+		margin-top:25px;
 	}
 }
 
 @media screen and (max-width:767px){
 	body{
-		font-size:3px;
+		font-size:5px;
 	}
 	#weirdtrailer{
-		width: 200px;
+		width: 300px;
 		height: 182px;
+		margin-top:15px;
 	}
 	
 	#trailerheader{
@@ -511,11 +514,12 @@ ul{
 
 @media screen and (max-width:480px){
 	body{
-		font-size:3px;
+		font-size:6px;
 	}
 	#weirdtrailer{
-		width: 150px;
-		height: 121px;
+		width: 300px;
+		height: 182px;
+		margin-top:10px;
 	}
 	#trailerheader{
 		margin-right: 0px;
