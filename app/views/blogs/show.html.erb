@@ -1,4 +1,6 @@
 <% provide(:title, @blog.title) %>
+<% meta :keywords => @blog.keywords %>
+<div id="BlogBack">
 <%= render 'layouts/header' %>
 <div id="BlogContainer" class="container">
 <p id="notice"><%= notice %></p>
@@ -15,8 +17,16 @@
 	    <%= sanitize @blog.content %>
 	</div></br>
 </div>
+<div class="row keywordsRow">
+	<% @blog.keywords.split(',').each do |k| %>
+	  <div class="col-md-1 keywords">
+		<%= k %>
+	  </div>
+	<% end %>
+</div>
 <div class="row actions">
 	<%= link_to 'Edit', edit_blog_path(@blog) %> |
 	<%= link_to 'Back', blogs_path %>
+</div>
 </div>
 </div>

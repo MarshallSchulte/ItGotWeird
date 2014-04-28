@@ -27,6 +27,7 @@ gem 'ckeditor'
 gem 'mini_magick'
 gem 'non-stupid-digest-assets'
 gem 'jquery-turbolinks'
+gem 'metamagic'
 
 
 group :development, :test do

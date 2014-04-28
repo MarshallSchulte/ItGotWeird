@@ -1,23 +1,36 @@
 <% provide(:title, "Blog") %>
-
+<% meta :keywords => %q(It Got Weird, blog, info) %>
+<div id="BlogBack">
 <%= render 'layouts/header' %>
 <div id="BlogContainer" class="container">
-	<h1 id="BlogHeader" style="">Blog Posts</h1> <%= link_to 'New Blog', new_blog_path, class: "btn btn-default btn-lg", id: "NewBlog" %>
+	<h1 id="BlogHeader" style="">Blog Posts</h1> <% if user_signed_in? %><%= link_to 'New Blog', new_blog_path, class: "btn btn-default btn-lg", id: "NewBlog" %> <% end %>
 
 
 
     <% @blogs.each do |blog| %>
-	  <div class="Blog">
+	  <div class=" row Blog">
        <div class="row"><h1 class="BlogTitle" style="text-align:center"><%= link_to blog.title, blog %></h1></div>
 	   <div class="row ImageRow"><img class="BlogImage" src="<%= blog.image %>"></div>
         <div class="row BlogContent"><%= sanitize blog.content %></div>
-		<div class="row center-block blogactions" style="text-align:center;">
-			<div class="col-md-1"><%= link_to 'Show', blog %></div>
-			<div class="col-md-1"><%= link_to 'Edit', edit_blog_path(blog) %></div>
-			<div class="col-md-1"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+		<div class="row keywordsrow">
+		  <% unless blog.keywords == nil %>
+			<% blog.keywords.try(:split, ",").each do |k| %>
+				<div class="col-md-1 keywords">
+					<%= k %>
+				</div>
+			<% end %>
+		  <% end %>
+		  
+				
+		</div>
+		<div class="row center-block blogactions" style="text-align:center; float:right;">
+			<div class="col-md-12 col-sm-12 col-xs-12 readmore"><%= link_to 'Read More >', blog %></div>
+			<% if user_signed_in? %><div class="col-md-1"><%= link_to 'Edit', edit_blog_path(blog) %></div>
+			<div class="col-md-1"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></div><% end %>
 		</div>
 	  </div>
     <% end %>
+</div>
 </div>
 
 <script>

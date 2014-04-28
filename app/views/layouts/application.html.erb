@@ -3,82 +3,19 @@
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <meta name="description" content="It Got Weird is a hilarious sketch comedy series." />
-  <meta name="keywords" content="It Got Weird, comedy, sketch comedy, comedy series, comedy" /> 
+  <%= metamagic %> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <script>
-$(document).ready(function(){
-	var ua = navigator.userAgent,
-	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
-	if (!!navigator.userAgent.match(/Trident\/7\./))
-	{
-
-	console.log("IE");
-	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
-	$("#hero").height($("#banner").height());
-	$(window).resize(function() {
-		$("#hero").height($("#banner").height());
-		$("#main").height($("#banner").height());
-	});
 		$("h1").hide().fadeOut(1000);
 		$("h1").blur().fadeIn(1000);
 		$(".row").hide().fadeOut(400);
 		$(".row").blur().fadeIn(400);
 		$("body").hide().fadeOut(400);
 		$("body").hide().fadeIn(400);
-	}
-	else if(isMobileWebkit)
-	{
-	console.log("Mobile");
-	$("#banner").attr({src: "/assets/weirdbannermobile.jpg"});
-	$("#banner").attr({style: "position:relative;"});
-	$("#hero").height($("#banner").height());
-	$("#trailerheader").insertAfter( $("#slogan") );
-	$(".title").remove();
-	$("#deschead").css({ "border-image-width": "0 0 0 0", "padding-top": "10px" });
-	$(window).resize(function() {
-		$("#hero").height($("#banner").height());
-		if($("#main").height() < 320){
-		$("#main").height(320);
-	}
-	});
-		$("h1").hide().fadeOut(1000);
-		$("h1").blur().fadeIn(1000);
-		$(".row").hide().fadeOut(400);
-		$(".row").blur().fadeIn(400);
-		$("body").hide().fadeOut(400);
-		$("body").hide().fadeIn(400);
-	}
-	else
-	{
-	console.log("desktop");
-	$("#hero").height($("#banner").height());
-	var parallaxImages = [];
-	$('.parallax').each(function(index) {
-		var parallaxImage = {};
-		parallaxImage.element = $(this);
-		parallaxImage.height = parallaxImage.element.height();
-		parallaxImages.push(parallaxImage);
-		$.stellar( {hideDistantElements: false} );
-	});
-	$(window).resize(function() {
-		$("#hero").height($("#banner").height());
-		$("#main").height($("#banner").height());
-		$.stellar('refresh');
-	});
-	  
-		$("h1").hide().fadeOut(1000);
-		$("h1").blur().fadeIn(1000);
-		$(".row").hide().fadeOut(400);
-		$(".row").blur().fadeIn(400);
-		$("body").hide().fadeOut(1000);
-		$("body").hide().fadeIn(1000);
-
-	}
-});
-</script>
+  </script>
 </head>
 <body>
 	<div class="container-fluid">

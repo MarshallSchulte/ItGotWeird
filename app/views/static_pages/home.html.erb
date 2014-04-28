@@ -1,5 +1,16 @@
+<% meta :keywords => %q(It Got Weird, sketch comedy, comedy) %>
+
 <div class="row" id="hero"  style="display:block;">
 	<img data-stellar-ratio="0.6" id="banner" src="/assets/weirdbanner.jpg" style="">
+</div>
+
+<div class="row" id="homenav">
+	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton">
+	<%= link_to (sanitize '<h1>Blog</h1>'), blogs_path %></div>
+	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton">
+	<%= link_to (sanitize '<h1>Videos</h1>'), "https://www.youtube.com/user/ItGotWeirdComedy" %></div>
+	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton">
+	<%= link_to (sanitize '<h1>Contact</h1>'), contact_path %></div>
 </div>
 
 <div class="col-md-12 col-sm-12 col-xs-12 parallax" id="main" data-stellar-background-ratio="0.7" style="min-height: 320px;">
@@ -19,7 +30,6 @@
 					nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 					sunt in culpa qui officia deserunt mollit anim id est laborum.
 			  </p>
-			  <a id="bloglink" href="/blogs"><h1 id="TheBlog">The Blog</h1></a>
 		</div>
 		
 </div>
@@ -63,3 +73,55 @@
 	  
 	  <%= render 'layouts/footer' %>
 </div>
+
+  <script>
+$(document).ready(function(){
+	var ua = navigator.userAgent,
+	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+	if (!!navigator.userAgent.match(/Trident\/7\./))
+	{
+
+	console.log("IE");
+	$("#banner").attr({src: "/assets/weirdbannerIE.jpg"});
+	$("#hero").height($("#banner").height());
+	$(window).resize(function() {
+		$("#hero").height($("#banner").height());
+		$("#main").height($("#banner").height());
+	});
+	}
+	else if(isMobileWebkit)
+	{
+	console.log("Mobile");
+	$("#banner").attr({src: "/assets/weirdbannermobile.jpg"});
+	$("#banner").attr({style: "position:relative;"});
+	$("#hero").height($("#banner").height());
+	$("#trailerheader").insertAfter( $("#slogan") );
+	$(".title").remove();
+	$("#deschead").css({ "border-image-width": "0 0 0 0", "padding-top": "10px" });
+	$(window).resize(function() {
+		$("#hero").height($("#banner").height());
+		if($("#main").height() < 320){
+		$("#main").height(320);
+	}
+	});
+	}
+	else
+	{
+	console.log("desktop");
+	$("#hero").height($("#banner").height());
+	var parallaxImages = [];
+	$('.parallax').each(function(index) {
+		var parallaxImage = {};
+		parallaxImage.element = $(this);
+		parallaxImage.height = parallaxImage.element.height();
+		parallaxImages.push(parallaxImage);
+		$.stellar( {hideDistantElements: false} );
+	});
+	$(window).resize(function() {
+		$("#hero").height($("#banner").height());
+		$("#main").height($("#banner").height());
+		$.stellar('refresh');
+	});
+	}
+});
+</script>

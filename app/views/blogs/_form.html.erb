@@ -15,6 +15,7 @@
     <%= f.input :title %>
 	<%= f.input :image %>
 	<%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :width =>800, :height => 400 } } %>
+	<%= f.input :keywords %>
 <% end %>
 	<%= f.actions do %>
       <%= f.action :submit, :as => :button %>

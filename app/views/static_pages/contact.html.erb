@@ -1,2 +1,24 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<% provide(:title, "Contact") %>
+<% meta :keywords => %q(It Got Weird, contact) %>
+<div id="ContactBack">
+<%= render 'layouts/header' %>
+  <div id="BlogContainer" class="container" style="height:auto;">
+   <h1 id="BlogHeader" style="text-align:center;">Contact</h1>
+	<div class="row Blog">
+		<div class="row BlogContent">Hey</div>
+		<div class="row BlogContent">randy@example.com</div>
+		<div class="row BlogContent">facebook.com</div>
+		<div class="row BlogContent">twitter.com</div>
+
+	</div>
+  </div>
+  <%= render 'layouts/footer' %>
+</div>
+
+<script>
+	$(document).ready(function() {
+		$("#ContactBack").height($(window).height());
+		$("#ContactBack").hide().fadeOut(400);
+		$("#ContactBack").blur().fadeIn(400);
+	});
+</script>
