@@ -13,7 +13,7 @@
 	<%= link_to (sanitize '<h1>Contact</h1>'), contact_path %></div>
 </div>
 
-<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="main" data-stellar-background-ratio="0.7" style="min-height: 320px;">
+<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="main" style="min-height: 320px;">
 	<div class="col-md-5 col-sm-5 col-xs-12" id="trailerheader">
 		<h2>The Trailer</h1>
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -34,8 +34,8 @@
 		
 </div>
 
-<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="cast" data-stellar-background-ratio="0.4">
-	<h1>Cast</h1>
+<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="cast">
+	<h1>Starring</h1>
 	  
 	  <div class="col-md-3 col-sm-3 col-xs-6 pic">
 		<h2>Kevin Anderson</h2>
@@ -59,7 +59,7 @@
 	  </div>
 </div>
 <div class="col-md-12 col-sm-12 col-xs-12 parallax" id="crew">
-	<h1 style="text-align: center;">Crew</h1>
+	<h1 style="text-align: center;">Created By</h1>
 	  
 	  <div class="col-md-6 col-sm-6 col-xs-6 pic">
 		<h2>Randy Overland</h2>
@@ -109,6 +109,7 @@ $(document).ready(function(){
 	{
 	console.log("desktop");
 	$("#hero").height($("#banner").height());
+	$("#homenav").css({ "margin-top": -($("#homenav").outerHeight()) });
 	var parallaxImages = [];
 	$('.parallax').each(function(index) {
 		var parallaxImage = {};
@@ -119,7 +120,6 @@ $(document).ready(function(){
 	});
 	$(window).resize(function() {
 		$("#hero").height($("#banner").height());
-		$("#main").height($("#banner").height());
 		$.stellar('refresh');
 	});
 	}
