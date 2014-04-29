@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424184008) do
+ActiveRecord::Schema.define(version: 20140429074129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,10 @@ ActiveRecord::Schema.define(version: 20140424184008) do
     t.datetime "updated_at"
     t.string   "image"
     t.string   "keywords"
+    t.string   "slug"
   end
+
+  add_index "blogs", ["slug"], name: "index_blogs_on_slug", using: :btree
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"

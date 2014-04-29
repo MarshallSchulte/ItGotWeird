@@ -370,6 +370,7 @@ ul{
 .blogcontent{
 	margin-top: 30px;
 	font-size: 1.5em;
+	margin: 20px 30px;
 }
 
 input{
@@ -631,6 +632,10 @@ ul{
 		margin-right: 0px;
 		margin-top:10px;
 		margin-bottom:20px;
+	}
+	#deschead{
+		padding-bottom:0;
+		margin-bottom:-30px;
 	}
 	#slogan{
 		margin-left:0em;

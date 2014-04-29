@@ -28,6 +28,8 @@ gem 'mini_magick'
 gem 'non-stupid-digest-assets'
 gem 'jquery-turbolinks'
 gem 'metamagic'
+gem 'whenever', :require => false
+gem 'friendly_id'
 
 
 group :development, :test do
