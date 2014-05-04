@@ -5,15 +5,15 @@
 </div>
 
 <div class="row" id="homenav">
-	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton">
+	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton" data-no-turbolink>
 	<%= link_to (sanitize '<h1>Blog</h1>'), blogs_path %></div>
-	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton">
+	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton" data-no-turbolink>
 	<%= link_to (sanitize '<h1>Videos</h1>'), "https://www.youtube.com/user/ItGotWeirdComedy" %></div>
-	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton">
+	<div class="col-md-4 col-sm-4 col-xs-4 homenavbutton" data-no-turbolink>
 	<%= link_to (sanitize '<h1>Contact</h1>'), contact_path %></div>
 </div>
 
-<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="main" style="min-height: 320px;">
+<div class="col-md-12 col-sm-12 col-xs-12 parallax" id="main" style="min-height: 320px;" data-stellar-background-ratio="0.6">
 	<div class="col-md-5 col-sm-5 col-xs-12" id="trailerheader">
 		<h2>The Trailer</h1>
 		<iframe id="weirdtrailer" src="//www.youtube.com/embed/o9m4Fy52Uwc?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -22,6 +22,8 @@
 		  <div class="title" id="title" data-stellar-ratio="0.70" data-stellar-vertical-offset="-10"><img src="/assets/Title.png"></div>
 			 <h2 id="deschead">A Weird Sketch Comedy Series.</h2>
 			  <p id="description">
+			  <a href="https://www.facebook.com/ItGotWeird"><img src="assets/FB-f-Logo__blue_50.png"></a>
+			  <a href="https://twitter.com/ItGotWeird_1"><img src="assets/Twitter_logo_blue.png"></a>
 			  </p>
 		</div>
 		
@@ -67,8 +69,8 @@
 	  <%= render 'layouts/footer' %>
 </div>
 
-  <script>
-$(document).ready(function(){
+<script>
+$(window).load(function(){
 	var ua = navigator.userAgent,
 	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
 	if (!!navigator.userAgent.match(/Trident\/7\./))
@@ -116,5 +118,11 @@ $(document).ready(function(){
 		$.stellar('refresh');
 	});
 	}
-});
+		$("h1").hide().fadeOut(1000);
+		$("h1").blur().fadeIn(1000);
+		$(".row").hide().fadeOut(400);
+		$(".row").blur().fadeIn(400);
+		$("body").hide().fadeOut(400);
+		$("body").hide().fadeIn(400);
+		});
 </script>

@@ -255,7 +255,7 @@ a:hover{
 	margin-top: 2em;
 	font-family: Helvetica;
 	font-size: 1.5em;
-	text-align:left;
+	text-align:center;
 	z-index:3;
 }
 
@@ -370,7 +370,7 @@ ul{
 .blogcontent{
 	margin-top: 30px;
 	font-size: 1.5em;
-	margin: 20px 30px;
+	margin: 30px 50px;
 }
 
 input{
@@ -435,7 +435,7 @@ ul{
 }
 
 .BlogContent{
-	padding:20px;
+	padding:20px 40px;
 	font-size: 1.5em;
 }
 
@@ -451,19 +451,33 @@ ul{
 	border-image-outset: 0;
 	border-image-repeat: round;
 }
-.ImageRow{
-	text-align:center;
-}
-.BlogImage{
-		width:100%;
-		max-width: 600px;
-		border:1px solid transparent;
+
+.ImageRowWrapper{
+	width: 600px;
+	margin: 0 auto;
+	border:1px solid transparent;
 		border-image: url('chalk.png');
 		border-image-slice:25;
 		border-image-width: 20 20 20 20;
 		border-image-outset: 0;
 		border-image-repeat: round;
 		padding:20px;
+}
+
+.ImageRow{
+	text-align:center;
+	overflow: hidden;
+	max-width: 600px;
+	width: 100%;
+	max-height: 400px;
+	height:400px;
+	position: relative;
+	margin: 0 auto;
+	background-position: center;
+}
+.BlogImage{
+		width:100%;
+		vertical-align:center;
 }
 
 #NewBlog{

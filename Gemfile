@@ -6,16 +6,13 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate'
-gem 'rmagick', :require => false
 gem 'carrierwave'
 gem 'fancybox-rails'
 gem "jquery-fileupload-rails"
 gem 'blueimp-gallery-rails'
 gem 'bootstrap-glyphicons'
-gem 'thin'
 gem 'jquery-ui-rails'
 gem 'geocoder'
-gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem 'ruby-hmac'
 gem 'rails-patch-json-encode'
 gem 'oj'
@@ -30,6 +27,10 @@ gem 'jquery-turbolinks'
 gem 'metamagic'
 gem 'whenever', :require => false
 gem 'friendly_id'
+gem 'capistrano',  '~> 3.1'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1'
+gem 'rvm1-capistrano3', require: false
 
 
 group :development, :test do
@@ -40,6 +41,10 @@ group :development, :test do
   gem 'childprocess', '0.3.6'
 end
 
+group :development do
+	gem 'thin'
+end
+
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
@@ -47,7 +52,6 @@ group :test do
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'rb-notifu', '0.0.4'
-  gem 'win32console', '1.3.2'
   gem 'wdm', '0.1.0'
 end
 
@@ -65,4 +69,5 @@ end
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'unicorn'
 end

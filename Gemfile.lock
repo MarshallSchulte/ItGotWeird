@@ -1,16 +1,4 @@
 GIT
-  remote: git://github.com/activerecord-hackery/ransack.git
-  revision: 8009ae93e3e00325e41edd231b4b917c45a2c6c2
-  branch: rails-4
-  specs:
-    ransack (1.1.0)
-      actionpack (>= 4.0)
-      activerecord (>= 4.0)
-      activesupport (>= 4.0)
-      i18n
-      polyamorous (~> 0.6.0)
-
-GIT
   remote: git://github.com/bmabey/database_cleaner.git
   revision: 35bd646903fc56af185a9fa9e360c568bb56756e
   specs:
@@ -65,6 +53,16 @@ GEM
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.1.4)
+    capistrano (3.2.1)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
     capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -170,6 +168,7 @@ GEM
     jquery-ui-rails (4.2.0)
       railties (>= 3.2.16)
     json (1.8.1)
+    kgio (2.9.2)
     listen (2.7.1)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -189,6 +188,9 @@ GEM
     minitest (4.7.5)
     multi_json (1.9.2)
     multi_test (0.1.1)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.0)
     nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -199,8 +201,6 @@ GEM
     orm_adapter (0.5.0)
     pg (0.15.1)
     pg (0.15.1-x86-mingw32)
-    polyamorous (0.6.4)
-      activerecord (>= 3.0)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -234,6 +234,7 @@ GEM
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    raindrops (0.13.0)
     rake (10.2.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
@@ -241,7 +242,6 @@ GEM
     rb-notifu (0.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    rmagick (2.13.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -259,6 +259,9 @@ GEM
       rspec-mocks (~> 2.13.0)
     ruby-hmac (0.4.0)
     rubyzip (0.9.9)
+    rvm1-capistrano3 (1.2.2)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -291,7 +294,13 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sshkit (1.4.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+      term-ansicolor
     subexec (0.2.3)
+    term-ansicolor (1.3.0)
+      tins (~> 1.0)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -300,6 +309,7 @@ GEM
     thread_safe (0.3.3)
     tilt (1.4.1)
     timers (1.1.0)
+    tins (1.1.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -307,6 +317,10 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unicorn (4.8.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
     wdm (0.1.0)
@@ -317,12 +331,12 @@ GEM
     will_paginate (3.0.4)
     win32-process (0.7.4)
       ffi (>= 1.0.0)
-    win32console (1.3.2)
     win32console (1.3.2-x86-mingw32)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -331,6 +345,9 @@ DEPENDENCIES
   bootstrap-glyphicons
   bootstrap-sass
   bootstrap-will_paginate
+  capistrano (~> 3.1)
+  capistrano-bundler (~> 1.1.2)
+  capistrano-rails (~> 1.1)
   capybara (= 2.1.0)
   carrierwave
   childprocess (= 0.3.6)
@@ -361,11 +378,10 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails-patch-json-encode
   rails_12factor (= 0.0.2)
-  ransack!
   rb-notifu (= 0.0.4)
-  rmagick
   rspec-rails (= 2.13.1)
   ruby-hmac
+  rvm1-capistrano3
   sass-rails (~> 4.0.2)
   sdoc (= 0.3.20)
   selenium-webdriver (= 2.35.1)
@@ -374,7 +390,7 @@ DEPENDENCIES
   thin
   turbolinks!
   uglifier (= 2.1.1)
+  unicorn
   wdm (= 0.1.0)
   whenever
   will_paginate (= 3.0.4)
-  win32console (= 1.3.2)

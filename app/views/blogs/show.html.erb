@@ -30,3 +30,19 @@
 </div>
 </div>
 </div>
+<script>
+	$(document).ready(function() {
+		$(".blogcontent img").each(function() {
+			var str = $(this).attr('src');
+			var strarray = str.split("/");
+			var strid = strarray[4];
+			var strpath = (strarray[5].split("content_"))[1];
+			$(this).wrap($("<a>" ,{
+			href: "/uploads/ckeditor/pictures/" + strid + "/" + strpath,
+			class: "blogpics"
+			}));
+		});
+	$(".blogpics").fancybox();
+});
+
+</script>

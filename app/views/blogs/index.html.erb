@@ -10,7 +10,7 @@
     <% @blogs.each do |blog| %>
 	  <div class=" row Blog">
        <div class="row"><h1 class="BlogTitle" style="text-align:center"><%= link_to blog.title, blog %></h1></div>
-	   <div class="row ImageRow"><img class="BlogImage" src="<%= blog.image %>"></div>
+	   <div class="ImageRowWrapper"><div class="row ImageRow" style="background-image: url('<%= blog.image %>'); background-repeat: no-repeat;"></div></div>
         <div class="row BlogContent"><%= sanitize blog.content %></div>
 		<div class="row keywordsrow">
 		  <% unless blog.keywords == nil %>
@@ -32,10 +32,9 @@
     <% end %>
 </div>
 </div>
-
+<%= render 'layouts/footer' %>
 <script>
 	$(document).ready(function() {
-	
 		$(".BlogContent img").each(function() {
 			var str = $(this).attr('src');
 			var strarray = str.split("/");
@@ -46,6 +45,7 @@
 			class: "blogpics"
 			}));
 		});
-		$(".blogpics").fancybox();
+	$(".blogpics").fancybox();
 });
+
 </script>
