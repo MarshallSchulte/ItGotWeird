@@ -31,6 +31,8 @@ gem 'capistrano',  '~> 3.1'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1'
 gem 'capistrano-rvm', github: "capistrano/rvm"
+gem 'unicorn'
+gem "unicorn-rails"
 
 
 group :development, :test do
@@ -42,7 +44,6 @@ group :development, :test do
 end
 
 group :development do
-	gem 'thin'
 end
 
 group :test do
@@ -69,5 +70,4 @@ end
 group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'unicorn'
 end

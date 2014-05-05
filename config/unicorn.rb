@@ -1,65 +1,24 @@
-# config/unicorn.rb
-# Set environment to development unless something else is specified
-env = ENV["RAILS_ENV"] || "development"
+# Set the working application directory
+# working_directory "/path/to/your/app"
+working_directory "/home/deploy/ItGotWeird"
 
-# See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete
-# documentation.
-worker_processes 4
+# Unicorn PID file location
+# pid "/path/to/pids/unicorn.pid"
+pid "/tmp/pid/unicorn.pid"
 
-# listen on both a Unix domain socket and a TCP port,
-# we use a shorter backlog for quicker failover when busy
-listen "/tmp/my_site.socket", :backlog => 64
+# Path to logs
+# stderr_path "/path/to/log/unicorn.log"
+# stdout_path "/path/to/log/unicorn.log"
+stderr_path "/home/deploy/ItGotWeird/log/unicorn.log"
+stdout_path "/home/deploy/ItGotWeird/log/unicorn.log"
 
-# Preload our app for more speed
-preload_app true
+# Unicorn socket
+listen "/tmp/unicorn.ItGotWeird.sock"
+listen "/tmp/unicorn.ItGotWeird.sock"
 
-# nuke workers after 30 seconds instead of 60 seconds (the default)
+# Number of processes
+# worker_processes 4
+worker_processes 2
+
+# Time-out
 timeout 30
-
-pid "/tmp/unicorn.my_site.pid"
-
-# Production specific settings
-if env == "production"
-  # Help ensure your application will always spawn in the symlinked
-  # "current" directory that Capistrano sets up.
-  working_directory "/home/deployer/apps/my_site/current"
-
-  # feel free to point this anywhere accessible on the filesystem
-  user 'deployer', 'staff'
-  shared_path = "/home/deployer/apps/my_site/shared"
-
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
-end
-
-before_fork do |server, worker|
-  # the following is highly recomended for Rails + "preload_app true"
-  # as there's no need for the master process to hold a connection
-  if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.connection.disconnect!
-  end
-
-  # Before forking, kill the master process that belongs to the .oldbin PID.
-  # This enables 0 downtime deploys.
-  old_pid = "/tmp/unicorn.my_site.pid.oldbin"
-  if File.exists?(old_pid) && server.pid != old_pid
-    begin
-      Process.kill("QUIT", File.read(old_pid).to_i)
-    rescue Errno::ENOENT, Errno::ESRCH
-      # someone else did our job for us
-    end
-  end
-end
-
-after_fork do |server, worker|
-  # the following is *required* for Rails + "preload_app true",
-  if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.establish_connection
-  end
-
-  # if preload_app is true, then you may also want to check and
-  # restart any other shared sockets/descriptors such as Memcached,
-  # and Redis.  TokyoCabinet file handles are safe to reuse
-  # between any number of forked children (assuming your kernel
-  # correctly implements pread()/pwrite() system calls)
-end
