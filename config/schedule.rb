@@ -13,8 +13,8 @@
 #   rake "some:great:rake:task"
 # end
 #
-# every :sunday, :at => '3am' do
-#   rake sitemap:refresh
-# end
+every :sunday, :at => '3am' do
+   rake sitemap:refresh
+end
 
 # Learn more: http://github.com/javan/whenever
