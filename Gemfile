@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
-gem 'rails', '4.0.2'
+ruby '2.0.0'
+gem 'rails', '4.1.0'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
@@ -30,7 +30,7 @@ gem 'friendly_id'
 gem 'capistrano',  '~> 3.1'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1'
-gem 'rvm1-capistrano3', require: false
+gem 'capistrano-rvm', github: "capistrano/rvm"
 
 
 group :development, :test do
@@ -67,7 +67,7 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+  gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
   gem 'unicorn'
 end

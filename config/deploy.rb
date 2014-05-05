@@ -1,5 +1,4 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
 
 set :application, 'ItGotWeird'
 set :repo_url, 'git@github.com:MarshallSchulte/ItGotWeird.git'
@@ -34,7 +33,7 @@ set :repo_url, 'git@github.com:MarshallSchulte/ItGotWeird.git'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :deploy_to, '/home/deploy/myapp'
+set :deploy_to, '/home/deploy/ItGotWeird'
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
