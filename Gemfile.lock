@@ -327,6 +327,8 @@ GEM
     unicorn-rails (2.1.1)
       rack
       unicorn
+    unicorn-worker-killer (0.4.2)
+      unicorn (~> 4)
     warden (1.2.3)
       rack (>= 1.0)
     wdm (0.1.0)
@@ -397,6 +399,7 @@ DEPENDENCIES
   uglifier (= 2.1.1)
   unicorn
   unicorn-rails
+  unicorn-worker-killer
   wdm (= 0.1.0)
   whenever
   will_paginate (= 3.0.4)

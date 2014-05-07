@@ -118,11 +118,10 @@ $(window).load(function(){
 		$.stellar('refresh');
 	});
 	}
-		$("h1").hide().fadeOut(1000);
-		$("h1").blur().fadeIn(1000);
-		$(".row").hide().fadeOut(400);
-		$(".row").blur().fadeIn(400);
-		$("body").hide().fadeOut(400);
-		$("body").hide().fadeIn(400);
 		});
+$(window).on('load', function() {
+   $("body").css({ "visibility": "visible" }).hide().fadeIn('slow');
+
+});
+
 </script>

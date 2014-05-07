@@ -33,6 +33,8 @@ gem 'capistrano-rails', '~> 1.1'
 gem 'capistrano-rvm', github: "capistrano/rvm"
 gem 'unicorn'
 gem "unicorn-rails"
+gem 'unicorn-worker-killer'
+
 
 
 group :development, :test do
