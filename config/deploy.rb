@@ -45,14 +45,15 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
-      puts "restarting unicorn..."
-        execute "sudo /etc/init.d/unicorn restart"
-        sleep 5
-        puts "whats running now, eh unicorn?"
-        execute "ps aux | grep unicorn"
     end
   end
 
+after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+end
   
 
   after :finishing, 'deploy:cleanup'
