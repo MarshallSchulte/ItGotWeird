@@ -48,10 +48,6 @@ namespace :deploy do
     end
   end
 
-  after :finishing, 'deploy:cleanup'
-end
-
-namespace :unicorn do
   desc 'Stop Unicorn'
   task :stop do
     on roles(:app) do
@@ -87,4 +83,9 @@ namespace :unicorn do
   task :restart
   before :restart, :stop
   before :restart, :start
+
+
+  after :finishing, 'deploy:cleanup'
 end
+
+
