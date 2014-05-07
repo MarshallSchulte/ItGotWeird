@@ -45,11 +45,23 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
-      execute :kill, capture("cat /home/deploy/ItGotWeird/current/tmp/pids/unicorn.pid")
     end
   end
 
   after :finishing, 'deploy:cleanup'
+end
+
+ namespace :unicorn do
+  desc 'Restart application'
+    task :restart do
+      on roles(:app) do
+        puts "restarting unicorn..."
+        execute "sudo /etc/init.d/unicorn_#{fetch(:application)} restart"
+        sleep 5
+        puts "whats running now, eh unicorn?"
+        execute "ps aux | grep unicorn"
+      end
+    end
 end
 
 
