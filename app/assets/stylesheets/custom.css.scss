@@ -60,10 +60,11 @@ a:hover{
 	border:1px solid transparent;
 	border-image: url('chalk.png');
 	border-image-slice:25;
-	border-image-width: 20 20 0 20;
+	border-image-width: 10 10 0 10;
 	border-image-outset: 0;
 	border-image-repeat: round;
 	h1{
+		font-size: 7em;
 		text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 	}
 	a{
@@ -81,13 +82,13 @@ a:hover{
 	border:1px solid transparent;
 	border-image: url('chalk.png');
 	border-image-slice:25;
-	border-image-width: 20 20 20 20;
+	border-image-width: 10 10 10 10;
 	border-image-outset: 0;
 	border-image-repeat: round;
 	padding-left:5%;
 	padding-right: 5%;
-	padding-top:20px;
-	padding-bottom:20px;
+	padding-top:10px;
+	padding-bottom:10px;
 	background-color: rgba(0,0,0,0.5);
 	z-index:3;
 	h1{
@@ -570,6 +571,9 @@ ul{
 	body{
 		font-size:7px;
 	}
+	.keywords{
+	font-size:1.5em;
+	}
 	#main{
 		height:auto;
 	}
@@ -609,6 +613,10 @@ ul{
 @media screen and (max-width:480px){
 	body{
 		font-size:6px;
+	}
+	.nav{
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 	#main{
 		height:auto;

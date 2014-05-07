@@ -19,16 +19,18 @@
 </div>
 <div class="row keywordsRow">
 	<% @blog.keywords.split(',').each do |k| %>
-	  <div class="col-md-1 keywords">
+	  <div class="col-md-1 col-sm-1 col-xs-1 keywords">
 		<%= k %>
 	  </div>
 	<% end %>
 </div>
 <div class="row actions">
-	<%= link_to 'Edit', edit_blog_path(@blog) %> |
+   <% if user_signed_in? %>
+	<%= link_to 'Edit', edit_blog_path(@blog) %> <% end %> |
 	<%= link_to 'Back', blogs_path %>
 </div>
 </div>
+<%= render 'layouts/footer' %>
 </div>
 <script>
 	$(document).ready(function() {

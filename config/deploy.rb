@@ -36,7 +36,7 @@ set :repo_url, 'git@github.com:MarshallSchulte/ItGotWeird.git'
 set :deploy_to, '/home/deploy/ItGotWeird'
 
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 namespace :deploy do
 
@@ -46,6 +46,8 @@ namespace :deploy do
       execute :touch, release_path.join('tmp/restart.txt')
     end
   end
+
+  
 
   after :finishing, 'deploy:cleanup'
 end
