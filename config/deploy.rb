@@ -45,9 +45,8 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
-      execute "sudo service unicorn restart"
     end
   end
 
-  after :finishing, 'deploy:cleanup'
+  after :finishing, 'deploy:cleanup', 'execute "sudo service unicorn restart"'
 end
