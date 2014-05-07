@@ -48,5 +48,14 @@ namespace :deploy do
     end
   end
 
-  after :finishing, 'deploy:cleanup', 'execute "sudo service unicorn restart"'
+namespace :unicorn do
+  desc 'Restart unicorn'
+    task :restart do
+      on roles(:app) do
+        execute "sudo service unicorn restart"
+      end
+    end
+end
+
+  after :finishing, 'deploy:cleanup'
 end
