@@ -2,12 +2,14 @@
 	<%= link_to (sanitize "<h1>It Got Weird</h1>"), root_path %>
 </div>
 <div class="row nav center-block">
-	<%= link_to (sanitize '<div class="col-md-3 col-sm-3 col-xs-3 navbutton" data-no-turbolink>
+     <div data-no-turbolink>
+	<%= link_to (sanitize '<div class="col-md-3 col-sm-3 col-xs-3 navbutton">
 		<h1>Home</h1>
-	</div>'), root_path %>
-	<%= link_to (sanitize '<div class="col-md-3 col-sm-3 col-xs-3 navbutton" data-no-turbolink>
+	</div>'), root_path %></div>
+	<div data-no-turbolink>
+	<%= link_to (sanitize '<div class="col-md-3 col-sm-3 col-xs-3 navbutton" >
 		<h1>Blogs</h1>
-	</div>'), blogs_path %>
+	</div>'), blogs_path %></div>
 	<a href="https://www.youtube.com/user/ItGotWeirdComedy"><div class="col-md-3 col-sm-3 col-xs-3 navbutton">
 		<h1>Videos</h1>
 	</div></a>
