@@ -38,6 +38,7 @@ set :deploy_to, '/home/deploy/ItGotWeird'
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
+
 namespace :deploy do
 
   desc 'Restart application'
@@ -45,7 +46,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       execute :touch, release_path.join('tmp/restart.txt')
       puts "restarting unicorn..."
-        execute "sudo /etc/init.d/unicorn_#{fetch(:application)} restart"
+        execute "sudo /etc/init.d/unicorn restart"
         sleep 5
         puts "whats running now, eh unicorn?"
         execute "ps aux | grep unicorn"
@@ -55,17 +56,4 @@ namespace :deploy do
   
 
   after :finishing, 'deploy:cleanup'
-end
-
-namespace :unicorn do
-  desc 'Restart application'
-    task :restart do
-      on roles(:app) do
-        puts "restarting unicorn..."
-        execute "sudo /etc/init.d/unicorn_#{fetch(:application)} restart"
-        sleep 5
-        puts "whats running now, eh unicorn?"
-        execute "ps aux | grep unicorn"
-      end
-    end
 end
