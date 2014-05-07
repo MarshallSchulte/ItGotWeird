@@ -17,7 +17,7 @@
 		<div class="row keywordsrow">
 		  <% unless blog.keywords == nil %>
 			<% blog.keywords.try(:split, ",").each do |k| %>
-				<div class="col-md-1 col-sm-1 col-xs-1 keywords">
+				<div class="col-md-1 col-sm-1 col-xs-2 keywords">
 					<%= k %>
 				</div>
 			<% end %>

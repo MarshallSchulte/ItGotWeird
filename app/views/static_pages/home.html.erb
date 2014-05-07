@@ -70,7 +70,8 @@
 </div>
 
 <script>
-$(window).load(function(){
+$(document).ready(function(){
+	$("body").css({ "visibility": "hidden" });
 	var ua = navigator.userAgent,
 	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
 	if (!!navigator.userAgent.match(/Trident\/7\./))
