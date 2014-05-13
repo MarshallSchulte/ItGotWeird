@@ -74,7 +74,7 @@ $(document).ready(function(){
 	$("body").css({ "visibility": "hidden" });
 	var ua = navigator.userAgent,
 	isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
-	if (!!navigator.userAgent.match(/Trident\/7\./)) || (!!navigator.userAgent.match(/CrOS/i))
+	if (navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/CrOS/i))
 	{
 
 	console.log("IE");
