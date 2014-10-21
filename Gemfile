@@ -35,6 +35,7 @@ gem 'unicorn'
 gem "unicorn-rails"
 gem 'unicorn-worker-killer'
 gem 'capistrano3-unicorn'
+gem 'thin'
 
 
 

@@ -3,7 +3,6 @@ SitemapGenerator::Sitemap.default_host = "http://www.itgotweirdseries.com"
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
-  add '/home', :changefreq => 'yearly', :priority => 1.0
   add '/blogs', :changefreq => 'weekly', :priority => 0.9
   Blog.find_each do |blog|
     add blog_path(blog), :lastmod => blog.updated_at
